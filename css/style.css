@@ -1,0 +1,247 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: #f5f5f7;
+}
+
+.header {
+  padding: 20px;
+}
+
+.header .hero-img {
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+}
+
+.header .hero-text {
+  margin: 10px 0;
+  font-size: 1.7em;
+}
+
+.header .hero-desc {
+  font-size: 0.8em;
+  color: #666;
+  opacity: 0.7;
+  max-width: 800px;
+  margin: 0 auto;
+  font-weight: bold;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1067px;
+  margin: 0 auto;
+}
+
+.product {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding-bottom: 0;
+}
+
+.product.homepod {
+  background: #000;
+  color: #fff;
+}
+
+.product h2 {
+  font-size: 1.5em;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.product p {
+  color: #333;
+  margin: 10px 0;
+  flex-grow: 0;
+  font-weight: bold;
+}
+
+.product.homepod p {
+  color: #fff;
+}
+
+.product .price {
+  font-size: 1.2em;
+  margin: 10px 0;
+  font-weight: 100;
+}
+
+.product.homepod .price {
+  color: #fff;
+  font-weight: 100;
+}
+
+.product-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.product-links a:first-child {
+  background-color: #0071e3;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 50px;
+  text-decoration: none;
+  margin-right: 10px;
+  white-space: nowrap;
+}
+
+.product-links a:last-child {
+  color: #0071e3;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.product.homeapp .product-links a:first-child {
+  display: none;
+}
+
+.product img {
+  width: 100%;
+  max-height: 250px;
+  height: auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  object-fit: cover;
+  z-index: 0;
+  padding-top: 20px;
+}
+
+.product p,
+.product h2,
+.product .price,
+.product h3 {
+  position: relative;
+  z-index: 1;
+}
+
+.apple-tv-4k h3 {
+  background: url("../assets/images/default/apple_tv_4k_logo_medium.jpg")
+    no-repeat center;
+  height: 50px;
+  text-indent: -9999px;
+  background-size: contain;
+}
+
+.homeapp h3 {
+  background: url("../assets/images/default/home_icon_medium.png") no-repeat
+    center;
+  height: 50px;
+  text-indent: -9999px;
+  background-size: contain;
+}
+
+@media (min-width: 734px) and (max-width: 1067px) {
+  .hero-img {
+    content: url("../assets/images/tablet/hero_medium.jpg");
+  }
+  .header .hero-text {
+    font-size: 4em;
+  }
+  .header .hero-desc {
+    font-size: 1em;
+  }
+  .product.apple-tv-4k img {
+    content: url("../assets/images/tablet/apple_tv_4k_medium.jpg");
+  }
+  .homepod img {
+    content: url("../assets/images/tablet/homepod_medium.jpg");
+  }
+  .homepod-mini img {
+    content: url("../assets/images/tablet/room_filling_sound_medium.jpg");
+  }
+  .apple-tv-4k h3 {
+    background: url("../assets/images/tablet/apple_tv_4k_logo_medium.png")
+      no-repeat center;
+  }
+  .homeapp h3 {
+    background: url("../assets/images/tablet/home_icon_medium.png") no-repeat
+      center;
+  }
+}
+
+@media (min-width: 1068px) {
+  .hero-img {
+    content: url("../assets/images/desktop/hero_large.jpg");
+  }
+  .header .hero-text {
+    font-size: 4.5em;
+  }
+  .header .hero-desc {
+    font-size: 1.2em;
+  }
+  .product.apple-tv-4k img {
+    content: url("../assets/images/desktop/apple_tv_4k_large.jpg");
+  }
+  .homepod img {
+    content: url("../assets/images/desktop/homepod_large.jpg");
+  }
+  .homepod-mini img {
+    content: url("../assets/images/desktop/room_filling_sound_large.jpg");
+  }
+  .apple-tv-4k h3 {
+    background: url("../assets/images/desktop/apple_tv_4k_logo_large.png")
+      no-repeat center;
+  }
+  .homeapp h3 {
+    background: url("../assets/images/desktop/home_icon_large.png") no-repeat
+      center;
+  }
+
+  .two-column-large.products {
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    gap: 70px;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .two-column-large.products .product {
+    width: 300px;
+  }
+}
+
+@media (max-width: 733px) {
+  .hero-img {
+    content: url("../assets/images/default/hero_small.jpg");
+  }
+  .product.apple-tv-4k img {
+    content: url("../assets/images/default/apple_tv_4k_small.jpg");
+  }
+  .homepod img {
+    content: url("../assets/images/default/homepod_small.jpg");
+  }
+  .homepod-mini img {
+    content: url("../assets/images/default/room_filling_sound_small.jpg");
+  }
+  .apple-tv-4k h3 {
+    background: url("../assets/images/tablet/apple_tv_4k_logo_medium.png")
+      no-repeat center;
+  }
+  .homeapp h3 {
+    background: url("../assets/images/tablet/home_icon_medium.png") no-repeat
+      center;
+  }
+}
