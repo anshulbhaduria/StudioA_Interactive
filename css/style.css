@@ -165,6 +165,11 @@ body {
   .header .hero-text {
     font-size: 2.4em;
   }
+  /* Ensure hero-desc is not altered for small screens */
+  .header .hero-desc {
+    font-size: 0.8em;
+    font-weight: bold;
+  }
   .product {
     width: 265px;
     height: 380px;
@@ -220,6 +225,10 @@ body {
   }
   .header .hero-text {
     font-size: 3em;
+  }
+  .header .hero-desc {
+    font-size: 1em;
+    font-weight: bold;
   }
   .product {
     width: 230px;
@@ -296,6 +305,10 @@ body {
   }
   .header .hero-text {
     font-size: 4.6em;
+  }
+  .header .hero-desc {
+    font-size: 1.2em;
+    font-weight: bold;
   }
   .product {
     width: 520px;
